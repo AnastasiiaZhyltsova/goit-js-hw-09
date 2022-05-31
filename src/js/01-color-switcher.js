@@ -10,22 +10,17 @@ const refs = {
 
 let timerId = null; 
 refs.btnStart.addEventListener('click', onClickStart);
+refs.btnStop.addEventListener('click', onClickStop);
 
 function onClickStart() {
      refs.btnStart.disabled = true;
      timerId = setInterval(() => {
         document.body.style.backgroundColor = getRandomHexColor();
-       
     }, 1000);
-
-   
 };
-
-refs.btnStop.addEventListener('click', onClickStop);
 
 function onClickStop() {
     clearInterval(timerId);
     refs.btnStart.disabled = false;
-   
 };
 
