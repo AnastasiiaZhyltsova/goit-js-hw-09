@@ -61,6 +61,10 @@ function onClickStart() {
                 // если deltaTime меньше или = 0 , тогда счетчик очищается 
             if (deltaTime <= 0) {
                 clearInterval(intervalId);  
+                    refs.dateSeconds.textContent ="00";
+                    refs.dateMinutes.textContent = "00";
+                    refs.dateHours.textContent = "00";
+                    refs.dateDays.textContent = "00";
             }
     }, 1000)
    
